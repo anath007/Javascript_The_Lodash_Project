@@ -29,7 +29,19 @@ const _ ={
       return words;
     },
 
-    pad()
+    pad(string, length)
+    {
+      if(string.length>=length)
+      {
+        return string;
+      }
+      const startPaddingLength=Math.floor((length-string.length)/2);
+      const endPaddingLenght=length-string.length-startPaddingLength;
+
+      const paddedString=' '.repeat(startPaddingLength)+string+' '.repeat(endPaddingLenght);
+      return paddedString;
+
+    }
   
   };
 
