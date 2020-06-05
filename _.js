@@ -53,7 +53,16 @@ const _ ={
       else{
         return false;
       }
-    }
+    },
+    invert(object) {
+      const invertedObject = {};
+  
+      for (key in object) {
+        invertedObject[object[key]] = key;
+      }
+  
+      return invertedObject;
+    },
   
   };
 
