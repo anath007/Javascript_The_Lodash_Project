@@ -91,7 +91,19 @@ const _ ={
       }
       let droppedArray=array.slice(n, array.length);
       return droppedArray;
+    },
+
+  dropWhile(array, predicate)
+  {
+    const call_back=(element, index) =>
+    {
+      return !predicate(element, index, array);
     }
+    let dropNumber=array.findIndex(call_back)
+    let droppedArray=this.drop(array,dropNumber);
+    return droppedArray;
+
+  }
   
   };
 
